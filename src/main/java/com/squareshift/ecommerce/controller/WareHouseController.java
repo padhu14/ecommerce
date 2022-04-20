@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class WareHouseController {
 
     @Autowired
-    WareHouseService wareHouseService;
+    private WareHouseService wareHouseService;
 
     @GetMapping(value = "/v1/warehouse/{postalCode}")
     public WarehouseResponseDto getWarehouseDistance(@PathVariable Long postalCode) throws Exception{

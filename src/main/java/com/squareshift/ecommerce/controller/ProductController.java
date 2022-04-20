@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ProductController {
 
     @Autowired
-    ProductService productService;
+    private ProductService productService;
 
     @GetMapping(value = "/v1/product/{id}")
     public ProductDto getProductById(@PathVariable Long id) throws Exception{

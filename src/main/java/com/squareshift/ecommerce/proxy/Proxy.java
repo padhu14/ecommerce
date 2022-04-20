@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface Proxy {
 
     @GetMapping(value = "/product/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
-    public ProductResponseDto getProductById(@PathVariable Long id) throws Exception;
+    ProductResponseDto getProductById(@PathVariable Long id) throws Exception;
 
     @GetMapping(value = "/warehouse/distance", consumes = MediaType.APPLICATION_JSON_VALUE)
-    public WarehouseResponseDto getWareHouseDistanceByPostalCode(@RequestParam Long postal_code) throws Exception;
+    WarehouseResponseDto getWareHouseDistanceByPostalCode(@RequestParam Long postal_code) throws Exception;
 }
